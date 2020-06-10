@@ -1,0 +1,15 @@
+{
+    "baseUrl": "http://localhost:4200",
+    "viewportHeight": 1080,
+    "viewportWidth": 1960,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "env": {
+        "RETRIES": 2,
+        "apiUrl": "https://conduit.productionready.io/",
+        "username": "karthik.startsmart@outlook.com",
+        "password": "Cypresstest"
+    }
+}

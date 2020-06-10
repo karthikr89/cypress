@@ -1,0 +1,44 @@
+{
+    "articles": [
+        {
+            "title": "Response1",
+            "slug": "test-puecaw",
+            "body": "test",
+            "createdAt": "2020-06-08T12:09:25.050Z",
+            "updatedAt": "2020-06-08T12:15:47.663Z",
+            "tagList": [
+                "test2"
+            ],
+            "description": "test",
+            "author": {
+                "username": "pgadea7",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 300
+        },
+        {
+            "title": "response 2",
+            "slug": "dfffds-ort1z1",
+            "body": "fdf",
+            "createdAt": "2020-06-08T11:57:27.376Z",
+            "updatedAt": "2020-06-08T11:57:27.376Z",
+            "tagList": [
+                "hsdbjdf",
+                "df"
+            ],
+            "description": "fd",
+            "author": {
+                "username": "laddu",
+                "bio": null,
+                "image": "https://static.productionready.io/images/smiley-cyrus.jpg",
+                "following": false
+            },
+            "favorited": false,
+            "favoritesCount": 800
+        }
+    ],
+    "articlesCount": 2
+}
