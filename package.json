@@ -14,7 +14,11 @@
     "mocha:results": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
     "junit:results": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/result.xml",
     "cypress:run": "npm run prereport && npx cypress run",
-    "cypress:test": "start-test start http-get://localhost:4200 cypress:run; npm run mocha:results; npm run junit:results"
+    "cypress:test": "start-test start http-get://localhost:4200 cypress:run; npm run mocha:results; npm run junit:results",
+    "cy:run-spec": "npx cypress run --spec 'cypress/integration/firstTest.spec.js'",
+    "cy:run-spec-headless": "npx cypress run --spec 'cypress/integration/firstTest.spec.js' --headless --record --key 12b38dff-4d2b-491c-ac89-17e26cf77d9a",
+    "cy:run-browser": "npm run cy:run-spec -- --browser firefox",
+    "cy:run-browser-headless": "npm run cy:run-spec-headless -- --browser chrome"
   },
   "pre-commit": [
     "lint"

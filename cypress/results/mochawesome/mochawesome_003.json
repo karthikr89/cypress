@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 2,
+    "failures": 0,
+    "start": "2020-06-12T16:07:00.775Z",
+    "end": "2020-06-12T16:07:10.395Z",
+    "duration": 9620,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "3a739723-ef79-4443-9723-75d188f31f42",
+      "title": "",
+      "fullFile": "cypress\\integration\\firstTest.spec.js",
+      "file": "cypress\\integration\\firstTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dccc1a4b-57f6-4e12-80a3-a1733ea7c27a",
+          "title": "Api test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate login",
+              "fullTitle": "Api test Validate login",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "6f115509-e866-40d7-94b5-4d23d011ae4c",
+              "parentUUID": "dccc1a4b-57f6-4e12-80a3-a1733ea7c27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mocking responses",
+              "fullTitle": "Api test Mocking responses",
+              "timedOut": null,
+              "duration": 7404,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.tag-list').then(function (tagList) {\n    console.log(tagList.text());\n});",
+              "err": {},
+              "uuid": "94b192c0-e471-40ad-993c-d5b7f149a5b5",
+              "parentUUID": "dccc1a4b-57f6-4e12-80a3-a1733ea7c27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Mocking responses for articles and feeds",
+              "fullTitle": "Api test Mocking responses for articles and feeds",
+              "timedOut": null,
+              "duration": 2152,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.route('GET', '**/articles/feed*', '{\"articles\":[],\"articlesCount\":0}');\ncy.route('GET', '**/articles*', 'fixture:articles.json');\ncy.contains('Global Feed').click();\ncy.fixture('articles.json').then(function (file) {\n    var articleRef = file.articles[1].slug;\n    cy.route('POST', \"**/articles/\" + articleRef + \"/favorite\", file);\n});\ncy.get('app-article-list button').eq(1).click()\n    .should('contain', \"801\");",
+              "err": {},
+              "uuid": "91efcdba-62ff-4296-98b2-6c9c967543a2",
+              "parentUUID": "dccc1a4b-57f6-4e12-80a3-a1733ea7c27a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "API request",
+              "fullTitle": "Api test API request",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "77a48599-8e03-49b5-b2db-f0eab259d252",
+              "parentUUID": "dccc1a4b-57f6-4e12-80a3-a1733ea7c27a",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "94b192c0-e471-40ad-993c-d5b7f149a5b5",
+            "91efcdba-62ff-4296-98b2-6c9c967543a2"
+          ],
+          "failures": [],
+          "pending": [
+            "6f115509-e866-40d7-94b5-4d23d011ae4c",
+            "77a48599-8e03-49b5-b2db-f0eab259d252"
+          ],
+          "skipped": [],
+          "duration": 9556,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

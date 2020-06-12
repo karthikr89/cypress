@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="31.8340" tests="4" failures="0" skipped="2">
+  <testsuite name="Root Suite" timestamp="2020-06-12T15:34:09" tests="0" file="cypress\integration\firstTest.spec.js" time="0.0000" failures="0">
+  </testsuite>
+  <testsuite name="Api test" timestamp="2020-06-12T15:34:09" tests="4" time="31.8340" failures="0">
+    <testcase name="Api test Mocking responses" time="29.8630" classname="Mocking responses">
+    </testcase>
+    <testcase name="Api test Mocking responses for articles and feeds" time="1.9710" classname="Mocking responses for articles and feeds">
+    </testcase>
+  </testsuite>
+</testsuites>
